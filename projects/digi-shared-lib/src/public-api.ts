@@ -9,3 +9,4 @@ export * from './lib/digi-shared-lib.module';
 export * from './lib/modules';
 
 export { DigiSharedLibModule } from './lib/digi-shared-lib.module';
+export { LoaderComponent } from './lib/modules/ui-components/loader/loader.component';
