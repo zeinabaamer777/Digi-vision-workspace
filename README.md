@@ -1,10 +1,19 @@
-# DigiPortalAdminApp
+# DigiVisionWorkSpace
+
+##### Table of Contents  
+
+1 shared library that contains shared modules, guards, interceptors, toastr that will be used in the projects.
+2 projects (admin, portal) that will use shared library
+
+## Headers
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+* if you wanna to run portal => Run  `npm run start:portal`
+* but if you wanna to run admin => Run  `npm run start:admin`
 
 ## Code scaffolding
 
@@ -12,7 +21,8 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm run build:portal` to build the portal project. 
+Run `npm run build:admin` to build the admin project.
 
 ## Running unit tests
 
