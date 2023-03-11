@@ -15,24 +15,25 @@ import { MatCardModule } from '@angular/material/card';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
+const MATMODULES = [
+  MatTableModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatPaginatorModule,
+  MatSortModule,
+  MatIconModule,
+  MatButtonModule,
+  MatDialogModule,
+  MatSelectModule,
+  MatListModule,
+  MatCheckboxModule,
+  MatCardModule,
+  MatAutocompleteModule,
+  MatProgressSpinnerModule,
+];
 @NgModule({
   declarations: [],
-  imports: [CommonModule],
-  exports: [
-    MatTableModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatPaginatorModule,
-    MatSortModule,
-    MatIconModule,
-    MatButtonModule,
-    MatDialogModule,
-    MatSelectModule,
-    MatListModule,
-    MatCheckboxModule,
-    MatCardModule,
-    MatAutocompleteModule,
-    MatProgressSpinnerModule,
-  ],
+  imports: [CommonModule, ...MATMODULES],
+  exports: [...MATMODULES],
 })
 export class MaterialModule {}

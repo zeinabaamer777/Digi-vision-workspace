@@ -1,0 +1,18 @@
+<div class="delete-product-wrapper p-5">
+  <h6 mat-dialog-title>Are you sure you want to delete this product?</h6>
+  <div mat-dialog-actions>
+    <button
+      class="mr-2"
+      type="button"
+      [class.spinner]="loading"
+      color="warn"
+      mat-raised-button
+      mat-button
+      [disabled]="loading"
+      (click)="deleteCountry()"
+    >
+      Delete
+    </button>
+    <button mat-dialog-close mat-button mat-raised-button>Cancel</button>
+  </div>
+</div>
