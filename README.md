@@ -2,10 +2,8 @@
 
 ##### Table of Contents  
 
-1 shared library that contains shared modules, guards, interceptors, toastr that will be used in the projects.
-2 projects (admin, portal) that will use shared library
-
-## Headers
+* 1 shared library that contains shared modules, guards, interceptors, toastr that will be used in the projects.
+* 2 projects (admin, portal) that will use shared library
 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
