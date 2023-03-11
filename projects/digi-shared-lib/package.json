@@ -1,0 +1,25 @@
+{
+  "name": "digi-shared-lib",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^15.1.0",
+    "@angular/core": "^15.1.0",
+    "@angular/animations": "^15.2.2",
+    "@angular/cdk": "^15.2.2",
+    "@angular/compiler": "^15.1.0",
+    "@angular/forms": "^15.1.0",
+    "@angular/material": "^15.2.2",
+    "@angular/platform-browser": "^15.1.0",
+    "@angular/platform-browser-dynamic": "^15.1.0",
+    "@angular/router": "^15.1.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0",
+    "digi-shared-lib": "file:projects/digi-shared-lib"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0",
+    "@ngx-translate/core": "^14.0.0",
+    "@ngx-translate/http-loader": "^7.0.0"
+  },
+  "sideEffects": false
+}

@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/ngx-toastr/toastr.css";
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mdc-text-field--no-label:not(.mdc-text-field--textarea)
+  .mat-mdc-form-field-input-control.mdc-text-field__input,
+.mat-mdc-text-field-wrapper .mat-mdc-form-field-input-control {
+  padding: 0.5rem 0;
+}
