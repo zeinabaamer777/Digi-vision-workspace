@@ -37,11 +37,11 @@ export class ProductsListComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.loadProducts();
+    this.getProductList();
   }
 
-  loadProducts(): void {
-    this.productsService.all().subscribe({
+  getProductList(): void {
+    this.productsService.getProductList().subscribe({
       next: (result) => {
         this.dataSource = new MatTableDataSource(result);
         this.dataSource.paginator = this.paginator;

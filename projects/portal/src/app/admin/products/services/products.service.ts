@@ -12,7 +12,7 @@ export class ProductsService {
 
   constructor(private http: HttpClient) {}
 
-  all(): Observable<IProduct[]> {
+  getProductList(): Observable<IProduct[]> {
     return this.http.get<IProduct[]>(`${this.baseURL}/products`).pipe(take(1));
   }
 

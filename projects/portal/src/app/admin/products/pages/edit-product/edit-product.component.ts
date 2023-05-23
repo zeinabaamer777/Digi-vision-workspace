@@ -3,10 +3,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ThemePalette } from '@angular/material/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProgressSpinnerMode } from '@angular/material/progress-spinner';
-import { ToastService } from 'projects/digi-shared-lib/src/public-api';
 import { IProduct } from '../../interfaces';
 import { ProductsService } from '../../services/products.service';
 import { ProductsListComponent } from '../products-list/products-list.component';
+import { ToastService } from 'projects/portal/src/app/core';
 
 @Component({
   selector: 'app-edit-product',
@@ -45,7 +45,7 @@ export class EditProductComponent implements OnInit {
   }
 
   getAllCategories() {
-    this.productsService.all().subscribe({
+    this.productsService.getProductList().subscribe({
       next: (res) => {
         this.categoriesList = res;
       },
