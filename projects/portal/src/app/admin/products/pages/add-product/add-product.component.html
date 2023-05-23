@@ -1,0 +1,120 @@
+<h6 mat-dialog-title>Add Product</h6>
+
+<div mat-dialog-content>
+  <form [formGroup]="form">
+    <div class="d-flex justify-content-center m-3">
+      <div style="width: 200px">
+        <ng-container *ngIf="!imageUrl; else imgPreview">
+          <img
+            style="width: 100%"
+            src="https://placehold.co/600x400"
+            alt="placehold"
+          />
+        </ng-container>
+        <ng-template #imgPreview>
+          <div class="d-flex justify-content-center">
+            <img
+              style="width: 200px; height: 200px; object-fit: cover"
+              [src]="imageUrl"
+              alt="placehold"
+            />
+          </div>
+        </ng-template>
+        <input
+          type="file"
+          #fileInput1
+          (change)="onFileSelected($event)"
+          style="display: none"
+        />
+
+        <button
+          type="button"
+          mat-raised-button
+          color="primary"
+          class="upload-btn my-3"
+          (click)="fileInput1.click()"
+        >
+          Upload image
+        </button>
+      </div>
+    </div>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <input type="text" matInput placeholder="Title" formControlName="title" />
+      <mat-error
+        *ngIf="
+          formControls['title']?.hasError('required') &&
+          (formControls['title']?.dirty || formControls['title']?.touched)
+        "
+      >
+        Title is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <input type="text" matInput placeholder="Price" formControlName="price" />
+      <mat-error
+        *ngIf="
+          formControls['price']?.hasError('required') &&
+          (formControls['price']?.dirty || formControls['price']?.touched)
+        "
+      >
+        Price is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <input
+        type="text"
+        matInput
+        placeholder="Description"
+        formControlName="description"
+      />
+      <mat-error
+        *ngIf="
+          formControls['description']?.hasError('required') &&
+          (formControls['description']?.dirty ||
+            formControls['description']?.touched)
+        "
+      >
+        Description is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="w-100" appearance="outline">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option *ngFor="let category of categoriesList" [value]="category">
+          <span class="d-flex justify-content-between">
+            <strong>
+              {{ category | titlecase }}
+            </strong>
+          </span>
+        </mat-option>
+      </mat-select>
+      <mat-error
+        *ngIf="
+          formControls['category']?.hasError('required') &&
+          (formControls['category']?.dirty || formControls['category']?.touched)
+        "
+      >
+        Category is <strong>required</strong>
+      </mat-error>
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button
+    class="mr-2"
+    type="button"
+    [class.spinner]="loading"
+    color="primary"
+    mat-raised-button
+    mat-button
+    [disabled]="loading"
+    (click)="addProduct()"
+  >
+    Add
+  </button>
+  <button mat-dialog-close mat-button mat-raised-button>Cancel</button>
+</div>

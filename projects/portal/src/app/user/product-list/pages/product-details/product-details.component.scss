@@ -1,0 +1,17 @@
+.prodcut-details-wrapper {
+  &__img-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+  }
+  &__img {
+    img {
+      max-width: 100%;
+      padding: 20px;
+      box-shadow: 2px 4px 14px 0 rgba(24, 86, 74, 0.2);
+      width: 600px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="prodcut-details-wrapper p-5" *ngIf="details">
+  <div class="container">
+    <div class="prodcut-details-wrapper__img-text">
+      <div class="prodcut-details-wrapper__img">
+        <img *ngIf="details.image" [src]="details.image" />
+      </div>
+
+      <div class="prodcut-details-wrapper__content">
+        <div class="mb-4">
+          <mat-icon *ngFor="let star of ratingArr"> star </mat-icon>
+        </div>
+
+        <p class="mb-3">Title : {{ details.title }}</p>
+
+        <!-- <p class="mb-3">Brand : {{ details.brand }}</p> -->
+
+        <p class="mb-3">Category : {{ details.category }}</p>
+
+        <p class="mb-3">Price : {{ details.price }}</p>
+
+        <!-- <p class="mb-3">Discount : {{ details.discountPercentage }}%</p> -->
+      </div>
+    </div>
+  </div>
+</div>

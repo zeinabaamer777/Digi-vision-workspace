@@ -1,0 +1,13 @@
+<div class="prodcuts-wrapper p-5">
+  <div class="prodcuts-wrapper__content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 mb-4" *ngFor="let product of productsList">
+          <div class="product-card-component">
+            <app-product-card [product]="product"></app-product-card>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
